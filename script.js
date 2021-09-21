@@ -34,7 +34,21 @@
     });
 
 
+// 40 mousemove and wall rotate
 
+let mouseP= {x:0, y:0};
+
+window.addEventListener('mousemove',(e)=>{
+
+  console.log(mouseP.x)
+  // console.log(mouseP.y)
+
+  mouseP.x =(e.clientX/ window.innerWidth *5)-2.5;
+  mouseP.y = e.clientY/window.innerWidth *5
+  console.log(mouseP.x)
+
+  stageElem.style.transform = `rotateX(${mouseP.y}deg) rotateY(${mouseP.x}deg)`;
+});
 
 
 
